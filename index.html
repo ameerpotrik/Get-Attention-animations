@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	
+
+    <title>SVG Animations</title>
+  </head>
+  <body>
+	<p><strong>Click</strong> a button to activate its animation.</p>
+	<div class="btn-container">
+		<div class="col-md-12 d-flex justify-content-around effects">
+			<div class="col-md-4 animation-p shockwave"><a><button type="button" class="btn" data-attr="btn-shockwave">Shockwave</button></a></div>
+			<div class="col-md-4 animation-p jumpwave"><a><button type="button" class="btn " data-attr="btn-jump">Jump</button></a></div>
+			<div class="col-md-4 animation-p pulse"><a><button type="button" class="btn " data-attr="btn-pulse">Pulse</button></a></div>
+		</div>
+		<div class="col-md-12 d-flex justify-content-around effects">
+			<div class="col-md-4 animation-p blink"><a><button type="button" class="btn " data-attr="btn-blink">Blink</button></a></div>
+			<div class="col-md-4 animation-p wiggle"><a><button type="button" class="btn " data-attr="btn-wiggle">Wiggle</button></a></div>
+			<div class="col-md-4 animation-p hatching-alien"><a><button type="button" class="btn " data-attr="btn-hatching-alien">Hatching Alien</button></a></div>
+		</div>
+	</div>	
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<script>
+		$('.animation-p .btn').click(function() {
+			var animClass = $(this).attr('data-attr');
+			if($(this).hasClass(animClass)) {
+				$(this).removeClass(animClass);
+			} else {
+				$(this).addClass(animClass);
+			}
+		});
+	
+	</script>
+
+</body>
+</html>
